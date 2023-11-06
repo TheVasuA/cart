@@ -1,13 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card_all{
+    @apply w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2  gap-y-20 gap-x-14 m-10 
+}
+.card_single{
+    @apply cursor-pointer list-none  bg-white border border-gray-200 rounded-lg shadow hover:scale-105 duration-100 max-w-sm  mx-auto
+}
+.img__card{
+    @apply  p-4 rounded-t-lg hover:scale-110 duration-100 h-[300px] max-w-sm relative  mx-auto  
+}
+.card__content{
+    @apply  text-justify m-5
+}
+.card__title{
+   @apply  text-xl font-semibold text-blue-600 text-center 
+}
+.card__button{
+    @apply px-4 py-2 text-sm text-white bg-blue-500 rounded shadow font-bold dark:hover:bg-blue-700  justify-center text-xl
 }
